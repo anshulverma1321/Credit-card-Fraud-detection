@@ -1,67 +1,36 @@
-# 💳 Credit Card Fraud Detection System
+💳 Credit Card Fraud Detection System
 
-This is a machine learning-powered Credit Card Fraud Detection system that helps identify suspicious transactions and alerts bank employees in real-time via SMS. It uses a trained model to analyze incoming transaction data and classify them as either **fraudulent** or **legitimate**.
+A Machine Learning-powered Credit Card Fraud Detection system that identifies suspicious transactions and notifies bank staff in real-time via SMS.
 
----
+This project leverages a trained ML model to classify transactions as fraudulent or legitimate, ensuring faster and smarter fraud prevention.
 
-## 🚀 Features
-
-- Real-time fraud detection
-- SMS alerts using Twilio for both fraud and legitimate transactions
-- Web interface for input via Flask
-- Data preprocessing with scaling and PCA
-- REST API with CORS enabled
-
----
-
-## 🧠 Tech Stack Used
-
-- **Programming Language**: Python
-- **Framework**: Flask
-- **Libraries**:
-  - `pandas`
-  - `numpy`
-  - `joblib`
-  - `scikit-learn` (for model, scaler, and PCA)
-  - `flask-cors`
-  - `twilio` (for SMS alerts)
-
----
-
-## 📦 Dataset
-
-- Sourced from [Kaggle Credit Card Fraud Detection Dataset](https://www.kaggle.com/mlg-ulb/creditcardfraud)
-- The dataset contains transactions made by credit cards in September 2013 by European cardholders.
-
----
-
-## 🔧 How to Run Locally
-
-1. **Clone the repository:**
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
-Install dependencies:
-pip install -r requirements.txt
-
-Ensure the following files are available in the models/ folder:
-fraud_model.pkl
-scaler.pkl
-pca.pkl
-
-Run the Flask app:
-python app.py
-Visit in browser:
-http://127.0.0.1:5000/
-📲 SMS Alerts
-This project integrates Twilio to send SMS notifications when:
-
-A fraudulent transaction is detected
-
-A legitimate transaction is approved
-
-⚠️ Make sure to configure your Twilio account SID, auth token, and phone numbers correctly in app.py.
-
-**Project Structure**
+🚀 Features
+🔍 Real-time Fraud Detection
+📩 Instant SMS Alerts using Twilio
+Fraudulent transactions
+Legitimate transaction confirmations
+🌐 Web Interface using Flask
+⚙️ Data Preprocessing
+Feature scaling
+PCA (Dimensionality Reduction)
+🔗 REST API with CORS enabled
+🧠 Tech Stack
+💻 Programming Language
+Python
+🌐 Framework
+Flask
+📚 Libraries Used
+pandas
+numpy
+joblib
+scikit-learn
+flask-cors
+twilio
+📦 Dataset
+Source: Kaggle Credit Card Fraud Detection Dataset
+Contains real-world transactions made by European cardholders (September 2013)
+Highly imbalanced dataset with fraudulent and legitimate transactions
+📁 Project Structure
 ├── app.py
 ├── models/
 │   ├── fraud_model.pkl
@@ -72,8 +41,47 @@ A legitimate transaction is approved
 ├── static/
 │   └── style.css
 └── requirements.txt
+🔧 Setup & Installation
+1️⃣ Clone the Repository
+git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
+2️⃣ Install Dependencies
+pip install -r requirements.txt
+3️⃣ Ensure Model Files Exist
 
-👨‍💻 Contributors
-Anshul Verma – Project Lead & Backend Developer
+Make sure the following files are inside the models/ directory:
 
-Licence:This project is open-source and available under the MIT License.
+fraud_model.pkl
+scaler.pkl
+pca.pkl
+▶️ Run the Application
+python app.py
+
+Open your browser and go to:
+
+http://127.0.0.1:5000/
+📲 SMS Alerts (Twilio Integration)
+
+This system sends SMS notifications when:
+
+🚨 A fraudulent transaction is detected
+✅ A legitimate transaction is approved
+⚠️ Important Setup
+
+Before running, configure your Twilio credentials inside app.py:
+
+Account SID
+Auth Token
+Sender & Receiver Phone Numbers
+👨‍💻 Contributor
+Anshul Verma
+Project Lead & Backend Developer
+📜 License
+
+This project is open-source and available under the MIT License.
+
+🌟 Future Improvements (Optional but Powerful)
+Add dashboard with analytics (fraud trends 📊)
+Deploy on cloud (AWS / Render / Railway)
+Add authentication for bank employees
+Improve model with deep learning
